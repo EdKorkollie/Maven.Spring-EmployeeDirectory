@@ -131,4 +131,13 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(firstName, lastName, title, phoneNumber, email, hireDate, manager, department);
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }

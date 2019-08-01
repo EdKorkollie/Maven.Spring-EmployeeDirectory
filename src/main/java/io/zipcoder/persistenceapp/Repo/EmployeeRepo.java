@@ -6,4 +6,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeeRepo extends JpaRepository<Employee, Long> {
+
+    Iterable<Employee> findAllByManager(Long managerId);
+
+    Iterable<Employee> findAllByDepartment(Long departmentId);
+
+    Iterable<Employee> findByManagerIsNull();
 }

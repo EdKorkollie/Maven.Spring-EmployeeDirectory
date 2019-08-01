@@ -36,6 +36,12 @@ public class DepartmentService {
         return departmentRepo.getOne(id);
     }
 
+    public Department updateDepartmentManager(Long id, Long managerId) {
+        Department original = findById(id);
+        original.setDepartmentManager(employeeRepo.getOne(managerId));
+        return departmentRepo.save(original);
+    }
+
     public boolean deletDepartment(Long id) {
         departmentRepo.delete(id);
         return true;
@@ -43,7 +49,7 @@ public class DepartmentService {
 
     public Department updateName(Long id, String name) {
         Department previous = findById(id);
-        previous.setDepartName(name);
+        previous.setdepartmentName(name);
         return departmentRepo.save(previous);
     }
 }

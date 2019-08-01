@@ -35,12 +35,12 @@ public class Department {
         this.id = id;
     }
 
-    public String getName() {
+    public String getdepartmentName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setdepartmentName(String departmentName) {
+        this.name = departmentName;
     }
 
     public Employee getManager() {
@@ -50,13 +50,11 @@ public class Department {
     public void setManager(Employee manager) {
         this.manager = manager;
     }
-
-    public String getDepartmentName() {
-        return name;
+    public Employee getDepartmentManager() {
+        return manager;
     }
-
-    public void setDepartName(String departmentName) {
-        this.name = departmentName;
+    public void setDepartmentManager(Employee manager) {
+        this.manager = manager;
     }
 
     @Override
